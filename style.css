@@ -1,5 +1,176 @@
-body {
-  color: hsl(0, 20%, 96%);
-  background-color: #523836;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #15152b;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+header { 
+    background: #20204a; 
+    padding: 15px 20px; 
+    position: sticky; 
+    top: 15px; width: 90%; 
+    margin: auto; 
+    border-radius: 15px; 
+    box-shadow: 0 5px 20px #0008; 
+    z-index: 100; 
+} 
+header .container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo {
+    color: #00e5ff;
+    font-size: 24px;
+    font-weight: bold;
+    animation: flotar 2s infinite;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #00e5ff;
+}
+
+
+@keyframes flotar {
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+section {
+    padding: 80px 0;
+}
+
+h1 {
+    color: #00e5ff;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #d5d5e5;
+    margin-bottom: 15px;
+}
+
+
+#yo {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+#yo h1 {
+    font-size: 50px;
+}
+
+
+#cualidades {
+    background: #1b1b38;
+}
+
+
+.project {
+    background: #292957;
+    padding: 25px;
+    margin: 10px;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px #0005;
+
+    transition: 0.3s;
+}
+
+.project h3 {
+    color: #a78bfa;
+    margin-bottom: 10px;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+
+.btn {
+    display: inline-block;
+
+    background: #00e5ff;
+    color: #15152b;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #a78bfa;
+}
+
+
+#contacto {
+    text-align: center;
+}
+
+.datos-contacto {
+    background: #292957;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.datos-contacto a {
+    color: #00e5ff;
+    text-decoration: none;
+}
+
+
+footer {
+    background: #0d0d1c;
+    text-align: center;
+    padding: 25px;
+}
+
+
+@media (max-width: 700px) {
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    #yo h1 {
+        font-size: 40px;
+    }
+}
+
